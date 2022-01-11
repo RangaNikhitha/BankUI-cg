@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+ 
 </head>
 <body>
 <c:import url="header.jsp" />
@@ -38,7 +38,7 @@
     
     <div class="form-group">
       <label for="exampleInputEmail1" class="form-label mt-4">Address</label>
-       <sf:textarea class="form-control" path="address"  aria-describedby="addressHelp" />
+       <sf:textarea class="form-control" path="address"  aria-describedby="addressHelp" /></textarea>
              <small id="addressHelp" class="form-text text-muted">This should match with your address from aadhar card </small>
        
      </div>
