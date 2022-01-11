@@ -25,6 +25,40 @@
 			</div>
 			<div class="col-lg-1"></div>
 		</div>
+		<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10"></div>
+		
+		
+		<div class="card border-primary mb-3">
+  <div class="card-header">Transfer</div>
+  <div class="card-body">
+    <h5 class="card-title">Enter Beneficiary Account Number to transfer Money</h5>
+    <p class="card-text">
+    You can transfer to the account that belongs only to our bank</p>
+    
+    <div class="form-group">
+  <label class="col-form-label col-form-label-lg mt-4" for="inputLarge"></label>
+  <input class="form-control form-control-lg" type="text" placeholder="account number" id="inputLarge">
+</div>
+
+	<hr />
+		<h5 class="card-title">Enter Amount to Transfer</h5>
+    <p class="card-text">
+    Maximum limit for transfer is 2000</p>
+    
+    <div class="form-group">
+  <label class="col-form-label col-form-label-lg mt-4" for="inputLarge"></label>
+  <input class="form-control form-control-lg" type="text" placeholder="amount" id="inputLarge">
+</div>
+	<br /><br />
+	<button type="button" class="btn btn-primary btn-lg">Initiate Transfer</button>
+	
+  </div>
+</div>
+	     </div>
+	     <div class="col-lg-1"></div> 
+	</div>
 	</div>
 </body>
 </html>
