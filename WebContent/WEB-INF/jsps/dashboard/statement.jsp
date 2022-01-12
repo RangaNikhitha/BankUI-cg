@@ -18,7 +18,7 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/dashboard" style="text-decoration: none;">Dashboard</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Transfer</li>
+						<li class="breadcrumb-item active" aria-current="page">Account Statement</li>
 					</ol>
 				</nav>
 				</div>
@@ -32,36 +32,37 @@
 			 
 			 
 			 <div class="card border-primary mb-3">
-  <div class="card-header">Transfer</div>
+  <div class="card-header">Account Statement</div>
   <div style="font-size:medium;  color: red" > <%=request.getAttribute("msg") %></div>
-  <sf:form method="get" action="${pageContext.request.contextPath }/process-transfer" modelAttribute="transfer"> 
+  <form method="get" action="${pageContext.request.contextPath }/process-statement"> 
   <div class="card-body">
-    <h5 class="card-title">Enter Beneficiary Account Number to transfer Money</h5>
+    <h5 class="card-title">Select FROM date from the calendar</h5>
     <p class="card-text">
     You can transfer to the account that belongs only to our bank</p>
     
     <div class="form-group">
-   <sf:input class="form-control form-control-lg" type="text" placeholder="account number" id="inputLarge" 
-   path="toAccountNumber" />
+   <input class="form-control" type="date" placeholder="select from date" 
+   name="startDate" />
 </div>
 
 	<hr />
 	
-	 <h5 class="card-title">Enter Amount to Transfer</h5>
+	 <h5 class="card-title">Select END date from the calendar</h5>
     <p class="card-text">
     Maximum limit for transfer is 20000</p>
     
     <div class="form-group">
-   <sf:input class="form-control form-control-lg" type="text" placeholder="amount" id="inputLarge" 
-   path="amount" />
+   <input class="form-control" type="date" placeholder="select to date" 
+   name="endDate" />
 </div>
 	
 	<br /><br />
-	<input type="submit" class="btn btn-primary btn-lg" value="Initiate Transfer" />
-	
+	<input type="submit" class="btn btn-primary btn-lg" value="Generate Statement" />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="reset" class="btn btn-primary btn-lg" value="reset" />
   </div>
   
-  </sf:form>
+  </form>
 </div>
 			</div>
 			<div class="col-lg-1"></div>
