@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bankui.beans.Account;
+import com.bankui.beans.Deposit;
 import com.bankui.beans.Transfer;
 
 @Controller
@@ -15,6 +16,9 @@ public class DashboardController {
 	
 	@Autowired
 	private Transfer transfer; 
+	
+	@Autowired
+	private Deposit deposit;
 	
 	@Autowired
 	private Account account;
@@ -33,7 +37,7 @@ public class DashboardController {
 	
 	@RequestMapping("/deposit")
 	public String showDepositScreen(Model model) {
-		model.addAttribute("transfer",transfer);
+		model.addAttribute("deposit",deposit);
 		model.addAttribute("msg", "");
 		return path+"deposit";
 	}
