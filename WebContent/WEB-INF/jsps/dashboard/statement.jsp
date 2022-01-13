@@ -67,6 +67,38 @@
 			</div>
 			<div class="col-lg-1"></div>
 		</div>
+		<br /><br /> <hr/> <br /><br />
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10"> 
+				<table class="table table-hover">
+					  <thead>
+					    <tr>
+					      <th scope="col">Date of Transaction</th>
+					      <th scope="col">Transfered From Account</th>
+					      <th scope="col">Beneficiary Account</th>
+					      <th scope="col">Amount</th>
+					      <th scope="col">Operation Type</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					   <c:forEach var="t" items="${list }">
+						    <tr class="table-light">
+						      <th scope="row"> <c:out value="${t.dateOfTransaction }" /></th>
+						      <td><c:out value="${t.accountFrom }" /></td>
+						      <td><c:out value="${t.accountTo }" /></td>
+						      <td><c:out value="${t.amount }" /></td>
+						      <td><c:out value="${t.operationType }" /></td>
+						    </tr>
+					    </c:forEach>
+					  </tbody>
+				 </table>	    
+			</div>
+			<div class="col-lg-1"></div>
+		</div>
+		
+		
 	</div>
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </body>
 </html>
